@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ფართობის გამოთვლა</title>
+	<link rel="icon" href="http://s27.postimg.org/ydene2vi7/favicon.png" type="image/x-icon" />
+	    <style>
+            html, body {
+                width: 1680px;
+                height: 357px;
+                margin: 0;
+                padding: 0;
+                
+            }
+            #container {
+                width: inherit;
+                height: inherit;
+                margin: 0;
+                padding: 0;
+                background-color: pink;
+            }
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+</head>
+
+<center><body>
+	<input type="text" id="a" value="ერთი გვერდის სიგრძე" onblur="if(value=='') value = 'ერთი გვერდის სიგრძე'" onfocus="if(value=='ერთი გვერდის სიგრძე') value = ''" 
+		style="border:none; position:absolute; left: 510px; top:141px; text-align: center; background-color: #009999; height:40px; width:250px; font-size:20px; transform: rotate(-60deg);">
+	</input>
+	<input type="text" id="b" value="მეორე გვერდის სიგრძე" onblur="if(value=='') value = 'მეორე გვერდის სიგრძე'" onfocus="if(value=='მეორე გვერდის სიგრძე') value = ''" 
+		style="border:none; position:absolute; left: 671px; top:157px; text-align: center; background-color: #009999; height:40px; width:400px; font-size:20px; transform: rotate(30deg);">
+	</input>
+	<input type="text" id="c" value="მესამე გვერდის სიგრძე" onblur="if(value=='') value = 'მესამე გვერდის სიგრძე'" onfocus="if(value=='მესამე გვერდის სიგრძე') value = ''" 
+		style="border:none; position:absolute; left: 555px; top:260px; text-align: center; background-color: #009999; height:40px; width:500px; font-size:20px;">
+	</input>
+	<button onclick="submit()" style="position:relative; left:-45px; top:320px;"> დააჭირეთ გამოსათვლელად
+	</button>
+
+<p id="write" style="position:relative; top:320px; padding-right:80px; color:blue; font-size:20px;"></p>
+<script type="text/javascript">
+
+function submit(){
+	var a = Number(document.getElementById("a").value);
+	var b = Number(document.getElementById("b").value);
+	var c = Number(document.getElementById("c").value);
+	var p = (a+b+c)/2;
+	var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+	if(s==0){
+	document.getElementById("write").innerHTML = "ესეთი სამკუთხედი არ არსებობს!";
+	}else if(s>0){
+	document.getElementById("write").innerHTML = "ამ სამკუთხედის ფართობია " + s;
+	}else{
+	document.getElementById("write").innerHTML = "გთხოვთ შეიყვანოთ პარამეტრები!";
+	}
+}
+
+
+</script>
+</body></center>
+</html>
