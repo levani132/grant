@@ -1,16 +1,3 @@
-﻿w3IncludeHTML();
-/* Set the width of the side navigation to 250px */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-}
-
 function writeSubjScore(sSubj, wSubj, minSubj, maxSubj){
 	if(sSubj == 0)
 		document.getElementById(wSubj).innerHTML = "გთხოვთ მიუთითოთ სწორი მონაცემები. (ქულის მინიმალური ზღვარი " + minSubj +", ხოლო მაქსიმალური " + maxSubj +", თუ თქვენი ქულა არის მინიმალურზე ნაკლები, სამწუხაროდ თქვენ ჩაიჭერით.)";
