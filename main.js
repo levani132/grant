@@ -6,10 +6,6 @@ function addSubject(subj, name){
 		name + '</a></h4>'));
 }
 
-function addHeaderImage(subj){
-	$('#headerImage').append($('<div class="circleOne"><img src="img/' + subj + '.png"></div>'));
-}
-
 $(document).ready(function(){
 	addHeaderImage('info');
 	addSubject('math', 'მათემატიკა');
@@ -21,15 +17,3 @@ $(document).ready(function(){
 	addSubject('fiz', 'ფიზიკა');
 	addSubject('info', 'ინფორმაცია');
 });
-
-/* Set the width of the side navigation to 250px */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-}

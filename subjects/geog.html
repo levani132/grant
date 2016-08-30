@@ -1,58 +1,21 @@
 ﻿<!DOCTYPE HTML>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<meta charset="utf-8">
-	<title>გრანტის გამოსათვლელი პროგრამა(გეოგრაფია)</title>
-	<link rel="Shortcut Icon" type="image/ico" href="http://mywebprojects.eu5.org/favicon.ico">
-	<script type="text/javascript" src="../js/scoring.js"></script>
-</head>
-
-<body style="background-color:grey;">
-
-<header class="header">
-	
-	<div style="position:absolute; z-index:2; width:800px; height:100%; left: 50%; transform: translateX(-50%);">
-		<div style="position:absolute; width:100%; z-index:3; height:100%;">
-			<h1 style="position:absolute; color:#A5D61C; left:20px; top:15px;">გეოგრაფია</h1>
-			<div class="circleOne" align="center"><img src="img/geografia.png" style="position:relative; top: 16px;"></div><a href="http://mywebprojects.eu5.org/"><div class="circleSmall" align="center" style="position:relative; top:63px;"><img src="img/arrow.png" style="position:relative; left:1px; top: 5px;"></div></a>
-		</div>
-		<a href="http://mywebprojects.eu5.org/"><img align="left" src="img/header-logo.png" style="position:absolute; left:-290px; top:18px;"></a>
-		<div style="position:absolute; width:128px; height:50%; top:30%; right:-128px;"><script type="text/javascript" src="http://counter7.bestfreecounterstat.com/private/counter.js?c=401efd3ce9a79c4842a52c4899745b76"></script></div>
-	</div>
-
-</header>
-
-<div align="center" style="position:absolute; z-index:1; top:100px; width:800px; height:800px; background-color:#e9e9e9; margin: auto; border:3px; box-shadow: 0px 2px 17px 3px rgba(0,0,0,0.75);  left: 50%; transform: translateX(-50%);">
-	
-		<h3>გთხოვთ შეიყვანოთ თქვენი ქულები</h3>
-	
-	<p>(გაითვალისწინეთ, რომ მოცემული პროგრამა ითვლის 2013 წელს გამოყენებული ტესტების სკალირებული ქულების მიხედვით, ანუ მიღებული შედეგი მიახლოებითია)</p>
-	
-	<div style="width:100%; height:160px;">
-		<div style="position:absolute; width:50%; top:114px; left:0px;" align="right">
-			<p style="line-height: 22px;">ქართული ენა და ლიტერატურა: </p><p id="br"></p>
-			<p style="line-height: 22px;">ზოგადი უნარები: </p><p id="bk"></p>
-			<p style="line-height: 22px;">უცხო ენა: </p><p id="bl"></p>
-			<p style="line-height: 22px;">გეოგრაფია: </p><p id="bn"></p>
-		</div>
-		
-		<div style="position:absolute; width:50%; right:0px;" align="left"><br>
-			<input id="geo" type="number"><p id="wgeo" style="color:blue;"></p></input>
-			<input id="sat" type="number"><p id="wsat" style="color:blue;"></p></input>
-			<input id="lan" type="number"><p id="wlan" style="color:blue;"></p></input>
-			<input id="geog" type="number"><p id="wgeog" style="color:blue;"></p></input>
-		</div>
-	</div>
-	
-	<p id="wgrant" style="position:absolute; color:green; font-size:20px; top:500px; left:50%; transform: translateX(-50%);"></p>
-	
-	<button onclick="submit()" id="button" style="position:absolute; top:290px; left:50%; transform: translateX(-50%);"> დააჭირეთ გამოსათვლელად
-	</button>
-	
-	<br><h1 id="result" style="position:absolute; top:590px; color:red; font-size:25px; left:50%; transform: translateX(-50%);"></h1>
-
-	<br /><p style="position:absolute; bottom:2px;">Made By <a style="text-decoration:none;" href="https://www.facebook.com/levaniberoshvili">Levan Beroshvili</a></p>
-</div>
-</body>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../style.css"></link>
+		<meta charset="utf-8"></meta>
+		<title><!-- Here goes subject name. --></title>
+		<link rel="Shortcut Icon" type="image/ico" href="favicon.ico"></link>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://www.w3schools.com/lib/w3data.js"></script>
+		<script src="../js/layout.js"></script>
+		<script src="../js/scoring.js"></script>
+	</head>
+	<body w3-include-html="template.html">
+	</body>
+	<script>
+		$(document).ready(function(){
+			w3IncludeHTML();
+			setTimeout(function(){loadSubject("გეოგრაფია", "geog")}, 10);
+		});
+	</script>
 </html>

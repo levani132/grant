@@ -1,32 +1,26 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="../style.css"></link>
-	<meta charset="utf-8"></meta>
-	<title><!-- Here goes subject name. --></title>
-	<link rel="Shortcut Icon" type="image/ico" href="favicon.ico"></link>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-</head>
-
-<body style="background-color:grey;">
-
- <div id="mySidenav" class="sidenav" style = "z-index: 10;">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+ <div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="#">About</a>
+	<a href="#">Services</a>
+	<a href="#">Clients</a>
+	<a href="#">Contact</a>
 </div>
 
 <div id="main">
-
 	<header>
 		<div onclick="openNav()" class = "box-shadow-menu"></div>
 		<div class="cover">
 			<h1><!-- Here goes subject name. --></h1>
 
+			<div class="circle-container" id="headerImage"><div class="circleOne"><!-- Here goes subject image. --></div></div>
 
-			<div class="circle-container" id="headerImage"><!-- Here goes subject image. --></div>
+			<div class="circleSmall-container">
+				<a href="../index.html">
+					<div class="circleSmall">
+						<img src="img/arrow.png">
+					</div>
+				</a>
+			</div>
 
 			<!-- Counter -->
 			<div class="counter"><script type="text/javascript" src="http://counter7.bestfreecounterstat.com/private/counter.js?c=401efd3ce9a79c4842a52c4899745b76"></script></div>
@@ -35,15 +29,67 @@
 	</header>
 
 	<div align="center" class = "content">
-		<!-- Here goes main content -->
-			
-			
+		<h3>გთხოვთ შეიყვანოთ თქვენი ქულები</h3>
+		
+		<p>(გაითვალისწინეთ, რომ მოცემული პროგრამა ითვლის 2013 წელს გამოყენებული ტესტების სკალირებული ქულების მიხედვით, ანუ მიღებული შედეგი მიახლოებითია)</p>
+
+		<table>
+			<tr>
+				<td class="table-subject">
+					<p>ქართული: </p>
+				</td>
+				<td class="table-input">
+					<input id="geo" type="number">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><p class="table-comment" id="wgeo"></p></td>
+			</tr>
+			<tr>
+				<td class="table-subject">
+					<p>უნარები: </p>
+				</td>
+				<td class="table-input">
+					<input id="sat" type="number">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><p class="table-comment" id="wsat"></p></td>
+			</tr>
+			<tr>
+				<td class="table-subject">
+					<p>უცხო ენა: </p>
+				</td>
+				<td class="table-input">
+					<input id="lan" type="number">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><p class="table-comment" id="wlan"></p></td>
+			</tr>
+			<tr>
+				<td class="table-subject">
+					<p class="subj"><!-- Here goes subject name. --></p>
+				</td>
+				<td class="table-input">
+					<input id="subj" type="number">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><p class="table-comment" id="wsubj"></p></td>
+			</tr>
+			<tr>
+				<td colspan="2"><p id="wgrant"></p></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button onclick="submit()" id="button">დააჭირეთ გამოსათვლელად</button></td>
+			</tr>
+			<tr>
+				<td colspan="2"><p id="result"></p></td>
+			</tr>
+		</table>			
 
 		<br /><p class="author">Made By <a href="https://www.facebook.com/levaniberoshvili">Levan Beroshvili</a></p>
 
 	</div>
 </div>
-
-
-</body>
-</html>	

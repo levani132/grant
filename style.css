@@ -6,7 +6,7 @@ html
 }
 
 body{
-	background: grey;
+	background-color: grey;
 }
 
 :root{
@@ -24,6 +24,27 @@ h1{
 	color:var(--color1); 
 	margin:35px 0 40px 0;
 }
+
+.table-subject{
+	text-align:right;
+	width:50%;
+}
+
+.table-input{
+	text-align:left;
+}
+
+.table-comment{
+	color:blue;
+	margin:auto;
+}
+
+#wgrant{
+	position:relative; 
+	font-size:20px; 
+	margin:auto;
+}
+
 .author{
 	position:absolute;
 	bottom:0;
@@ -61,8 +82,15 @@ h1{
 	background-color:var(--color1); 
 	box-shadow: 0px 5px 10px -4px rgba(0,0,0,0.75);
 }
+.circleSmall-container{
+	border-radius:50%; 
+	width:37px; height:37px;
+	position:absolute;
+	bottom:0;
+}
 .circleSmall{
 	border-radius:50%; 
+	text-align: center;
 	width:37px; height:37px; 
 	background-color:var(--color1);
 	box-shadow: 0px 5px 10px -4px rgba(0,0,0,0.75);
@@ -153,6 +181,7 @@ table{
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    z-index: 10;
 }
 
 /* The navigation menu links */
