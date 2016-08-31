@@ -42,19 +42,22 @@
 <p id="write" style="position:relative; top:320px; padding-right:80px; color:blue; font-size:20px;"></p>
 <script type="text/javascript">
 
+function cout(text){
+	document.getElementById("write").innerHTML = text;
+}
+
 function submit(){
 	var a = Number(document.getElementById("a").value);
 	var b = Number(document.getElementById("b").value);
 	var c = Number(document.getElementById("c").value);
+	if(a == NaN || b == NaN || c == NaN)
+		cout("გთხოვთ შეიყვანოთ პარამეტრები სწორად!");
 	var p = (a+b+c)/2;
 	var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
-	if(s==0){
-	document.getElementById("write").innerHTML = "ესეთი სამკუთხედი არ არსებობს!";
-	}else if(s>0){
-	document.getElementById("write").innerHTML = "ამ სამკუთხედის ფართობია " + s;
-	}else{
-	document.getElementById("write").innerHTML = "გთხოვთ შეიყვანოთ პარამეტრები!";
-	}
+	if(s == 0 || s == NaN)
+		cout("ესეთი სამკუთხედი არ არსებობს!");
+	else if(s>0)
+		cout("ამ სამკუთხედის ფართობია " + s);
 }
 
 
