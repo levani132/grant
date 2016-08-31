@@ -39,7 +39,7 @@ function subjectOf(name){
 	return eval(name);
 }
 
-function submit(subjName){	
+function submit(subjName){
 	var geo = new subject(80.0, 21.0, 183.0, 120.0, null, null, null);
 	var sat = new subject(80, 24, 192.7, 134.9, null, null, null);
 	var lan = new subject(100, 21, 177.5, 131.6, null, null, null);

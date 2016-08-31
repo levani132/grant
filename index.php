@@ -1,4 +1,20 @@
 ﻿<!DOCTYPE HTML>
+ <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+?> 
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -6,9 +22,9 @@
 	<title>გრანტის გამოსათვლელი პროგრამა</title>
 	<link rel="Shortcut Icon" type="image/ico" href="favicon.ico">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="https://www.w3schools.com/lib/w3data.js"></script>
-	<script src="js/layout.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<script src="/js/w3data.js"></script>
+	<script src="/js/layout.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 
 <body style="height:1000px;">

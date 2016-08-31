@@ -1,9 +1,11 @@
+const endl = "<br />"
+
 function cout(text){
-	document.getElementById("write").innerHTML += text + "<br>";
+	document.getElementById("write").innerHTML += text + endl;
 }
 
 function write(text){
-	document.getElementById("write").innerHTML = text + "<br>";
+	document.getElementById("write").innerHTML = text + endl;
 }
 
 function option(first, second, third) {

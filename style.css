@@ -158,7 +158,8 @@ table{
 		left:0;
 	}
 	h1{
-		margin-top:37px;
+		position:absolute;
+		bottom:0;
 		font-size: 25px;
 		padding-left:100px;
 	}
