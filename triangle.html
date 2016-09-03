@@ -54,7 +54,7 @@ function submit(){
 		cout("გთხოვთ შეიყვანოთ პარამეტრები სწორად!");
 	var p = (a+b+c)/2;
 	var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
-	if(s == 0 || s == NaN)
+	if(!s)
 		cout("ესეთი სამკუთხედი არ არსებობს!");
 	else if(s>0)
 		cout("ამ სამკუთხედის ფართობია " + s);
