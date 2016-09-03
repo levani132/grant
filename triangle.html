@@ -50,7 +50,7 @@ function submit(){
 	var a = Number(document.getElementById("a").value);
 	var b = Number(document.getElementById("b").value);
 	var c = Number(document.getElementById("c").value);
-	if(a == NaN || b == NaN || c == NaN)
+	if(!a || !b || !c)
 		cout("გთხოვთ შეიყვანოთ პარამეტრები სწორად!");
 	var p = (a+b+c)/2;
 	var s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
