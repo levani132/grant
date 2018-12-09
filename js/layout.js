@@ -1,6 +1,6 @@
 ﻿/* Adds header image with subject name */
-function addHeaderImage(subj){
-	$('.circleOne').append($('<img src="/img/' + subj + '.png">'));
+function addHeaderImage(subj, path = ''){
+	$('.circleOne').append($(`<img src="${path}img/${subj}.png">`));
 }
 
 /* Set the width of the side navigation to 250px */
@@ -16,18 +16,18 @@ function closeNav() {
 }
 
 /* Loads subject that is specified */
-function loadSubject(title, subject){
+function loadSubject(title, subject, path = ''){
 	$("title").html(title);
 	$("h1").html(title);
 	$(".subj").html(title + ": ");
-	addHeaderImage(subject);
+	addHeaderImage(subject, path);
 	$("button").attr("onclick", "submit('" + subject + "')");
 }
 
 /* Adds subject link in its container */
 function addSubject(subj, name){
-	$('#' + subj).append($('<div class="circle-container"><a href="/subjects/' + 
-		subj + '.html"><div class="circle"><img src="/img/' + 
+	$('#' + subj).append($('<div class="circle-container"><a href="subjects/' + 
+		subj + '.html"><div class="circle"><img src="img/' + 
 		subj + '.png"></div></a></div><h4><a href="subjects/' + 
 		subj + '.html">' + 
 		name + '</a></h4>'));

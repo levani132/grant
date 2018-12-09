@@ -6,16 +6,16 @@
 		<title><!-- Here goes subject name. --></title>
 		<link rel="Shortcut Icon" type="image/ico" href="favicon.ico"></link>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="/js/w3data.js"></script>
-		<script src="/js/layout.js"></script>
-		<script src="/js/scoring.js"></script>
+		<script src="../js/w3data.js"></script>
+		<script src="../js/layout.js"></script>
+		<script src="../js/scoring.js"></script>
 	</head>
 	<body w3-include-html="template.html">
 	</body>
 	<script>
 		$(document).ready(function(){
 			w3IncludeHTML();
-			setTimeout(function(){loadSubject("ისტორია", "ist")}, 10);
+			setTimeout(function(){loadSubject("ისტორია", "ist", '../')}, 10);
 		});
 	</script>
 </html>
